@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{21DD489C-8AFB-474C-BB02-888935B3ED34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3C52EA4E-8F54-42F6-8AAA-6A793D173040}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{727B12F0-22F4-4629-B393-0F9AA581E57C}"
+	ProjectSection(SolutionItems) = preProject
+		build\Fyhr.NAnt.ILMerge.build = build\Fyhr.NAnt.ILMerge.build
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fyhr.NAnt.ILMerge", "src\app\Fyhr.NAnt.ILmerge\Fyhr.NAnt.ILMerge.csproj", "{B1069A7C-AB4B-4C50-9516-AE3BD9A3863E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1069A7C-AB4B-4C50-9516-AE3BD9A3863E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1069A7C-AB4B-4C50-9516-AE3BD9A3863E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1069A7C-AB4B-4C50-9516-AE3BD9A3863E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1069A7C-AB4B-4C50-9516-AE3BD9A3863E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1069A7C-AB4B-4C50-9516-AE3BD9A3863E} = {21DD489C-8AFB-474C-BB02-888935B3ED34}
+	EndGlobalSection
+EndGlobal
