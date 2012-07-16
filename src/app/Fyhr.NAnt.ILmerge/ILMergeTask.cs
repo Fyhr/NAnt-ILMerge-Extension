@@ -148,10 +148,10 @@ namespace Fyhr.NAnt.ILMerge
             merger.OutputFile     = OutputFile;
             merger.KeyFile	      = KeyFile;
 
-			merger.SetInputAssemblies( InputAssemblies.FileNames.Cast<string>().ToArray() );
-
 			if( LibraryPath != null)
-				merger.SetSearchDirectories( LibraryPath.FileNames.Cast<string>().ToArray() );
+				merger.SetSearchDirectories( LibraryPath.DirectoryNames.Cast<string>().ToArray() );
+
+			merger.SetInputAssemblies( InputAssemblies.FileNames.Cast<string>().ToArray() );
 
             switch( TargetKind.ToLower())
             {
