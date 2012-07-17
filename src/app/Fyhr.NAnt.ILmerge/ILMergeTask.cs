@@ -12,6 +12,8 @@ namespace Fyhr.NAnt.ILMerge
 	{
 		#region Fields
 
+		private string _targetPlatformDirectory;
+		private string _targetPlatform;
 		private string _attributeFile;
         private string _excludeFile;
         private string _targetKind;
@@ -43,6 +45,32 @@ namespace Fyhr.NAnt.ILMerge
 
 		[BuildElement("inputassemblies", Required = true)]
 		public virtual FileSet InputAssemblies { get; set; }
+
+		[TaskAttribute("targetplatform")]
+		public virtual string TargetPlatform
+		{
+			get
+			{
+				return _targetPlatform;
+			}
+			set
+			{
+				_targetPlatform = StringUtils.ConvertEmptyToNull(value);
+			}
+		}
+
+		[TaskAttribute("targetplatformdirectory")]
+		public virtual string TargetPlatformDirectory
+		{
+			get
+			{
+				return _targetPlatformDirectory;
+			}
+			set
+			{
+				_targetPlatformDirectory = StringUtils.ConvertEmptyToNull(value);
+			}
+		}
 
 		[TaskAttribute("attributefile")]
         public virtual string AttributeFile
@@ -147,7 +175,10 @@ namespace Fyhr.NAnt.ILMerge
             merger.Log            = !string.IsNullOrEmpty( _logFile );
             merger.OutputFile     = OutputFile;
             merger.KeyFile	      = KeyFile;
-
+			
+			if( TargetPlatform != null && TargetPlatformDirectory != null )
+				merger.SetTargetPlatform( TargetPlatform, TargetPlatformDirectory );
+			
 			if( LibraryPath != null)
 				merger.SetSearchDirectories( LibraryPath.DirectoryNames.Cast<string>().ToArray() );
 
