@@ -5,16 +5,16 @@ ILMerge task for NAnt
 
 Example usage:
 
-<loadtasks assembly="${path::combine(nant_path, 'bin\Fyhr.NAnt.ILMerge.dll')}" />
+&lt;loadtasks assembly="${path::combine(nant_path, 'bin\Fyhr.NAnt.ILMerge.dll')}" /&gt;
 
-<ilmerge outputfile="output.dll"
+&lt;ilmerge outputfile="output.dll"
          targetkind="dll"
          logfile="ilmerge.log"
          targetplatform="v4"
-         targetplatformdirectory="C:\Windows\Microsoft.NET\Framework64\v4.0.30319">
-  <inputassemblies>
-    <include name="first.dll')}" />
-    <include name="second.exe')}" />
-  </inputassemblies>
+         targetplatformdirectory="C:\Windows\Microsoft.NET\Framework64\v4.0.30319"&gt;
+  &lt;inputassemblies>
+    &lt;include name="first.dll')}" /&gt;
+    &lt;include name="second.exe')}" /&gt;
+  &lt;/inputassemblies&gt;
 
-</ilmerge>
+&lt;/ilmerge&gt;
